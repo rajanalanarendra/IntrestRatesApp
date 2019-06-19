@@ -1,0 +1,294 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2561FE25-48AE-4EFF-BB0C-5A65B3A65CA1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IntrestRatesApp</RootNamespace>
+    <AssemblyName>IntrestRatesApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\app.js" />
+    <Content Include="app\controllers\homeController.js" />
+    <Content Include="app\controllers\indexController.js" />
+    <Content Include="app\services\authInterceptorService.js" />
+    <Content Include="app\services\homeService.js" />
+    <Content Include="app\views\home.html" />
+    <Content Include="content\css\bootstrap.min.css" />
+    <Content Include="content\css\font-awesome.min.css" />
+    <Content Include="content\css\loading-bar v0.3.0.css" />
+    <Content Include="content\css\loading-bar.css" />
+    <Content Include="content\css\loading-bar.min v0.3.0.css" />
+    <Content Include="content\css\loading-bar.min.css" />
+    <Content Include="content\css\site.css" />
+    <Content Include="content\css\social-buttons.css" />
+    <Content Include="content\fonts\fontawesome-webfont.svg" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="index.html" />
+    <Content Include="scripts\angucompleteAlt\css\angucomplete-alt.css" />
+    <Content Include="scripts\angucompleteAlt\css\structure.css" />
+    <Content Include="scripts\angucompleteAlt\fonts\bariol\bariol.css" />
+    <Content Include="scripts\angucompleteAlt\fonts\bariol\bariol_bold-demo.html" />
+    <Content Include="scripts\angucompleteAlt\fonts\bariol\bariol_bold-webfont.svg" />
+    <Content Include="scripts\angucompleteAlt\fonts\bariol\bariol_regular-webfont.svg" />
+    <Content Include="scripts\angucompleteAlt\img\alanp.jpg" />
+    <Content Include="scripts\angucompleteAlt\img\annie.jpg" />
+    <Content Include="scripts\angucompleteAlt\img\daryl.jpeg" />
+    <Content Include="scripts\angucompleteAlt\index.html" />
+    <Content Include="scripts\angucompleteAlt\js\app.js" />
+    <Content Include="scripts\angucompleteAlt\js\libs\angucomplete-alt.js" />
+    <Content Include="scripts\angucompleteAlt\js\libs\es5-shim.min.js" />
+    <Content Include="scripts\angucompleteAlt\js\libs\json3.min.js" />
+    <Content Include="scripts\angucomplete\css\angucomplete.css" />
+    <Content Include="scripts\angucomplete\css\structure.css" />
+    <Content Include="scripts\angucomplete\fonts\bariol\bariol.css" />
+    <Content Include="scripts\angucomplete\fonts\bariol\bariol_bold-demo.html" />
+    <Content Include="scripts\angucomplete\fonts\bariol\bariol_bold-webfont.svg" />
+    <Content Include="scripts\angucomplete\fonts\bariol\bariol_regular-webfont.svg" />
+    <Content Include="scripts\angucomplete\img\alanp.jpg" />
+    <Content Include="scripts\angucomplete\img\annie.jpg" />
+    <Content Include="scripts\angucomplete\img\daryl.jpeg" />
+    <Content Include="scripts\angucomplete\index.html" />
+    <Content Include="scripts\angucomplete\js\angular-touch.min.js" />
+    <Content Include="scripts\angucomplete\js\angular.min.js" />
+    <Content Include="scripts\angucomplete\js\app\app.js" />
+    <Content Include="scripts\angucomplete\js\app\controllers\main-controller.js" />
+    <Content Include="scripts\angucomplete\js\app\directives\angucomplete.js" />
+    <Content Include="scripts\angular-animate.min.js" />
+    <Content Include="scripts\angular-aria.min.js" />
+    <Content Include="scripts\angular-growl-2\build\angular-growl.css" />
+    <Content Include="scripts\angular-growl-2\build\angular-growl.js" />
+    <Content Include="scripts\angular-growl-2\build\angular-growl.min.css" />
+    <Content Include="scripts\angular-growl-2\build\angular-growl.min.js" />
+    <Content Include="scripts\angular-growl-2\demo\app.js" />
+    <Content Include="scripts\angular-growl-2\demo\index.html" />
+    <Content Include="scripts\angular-growl-2\doc\screenshot.jpg" />
+    <Content Include="scripts\angular-growl-2\gruntfile.js" />
+    <Content Include="scripts\angular-growl-2\karma.conf.js" />
+    <Content Include="scripts\angular-growl-2\src\growl.css" />
+    <Content Include="scripts\angular-growl-2\src\growl.js" />
+    <Content Include="scripts\angular-growl-2\src\growlDirective.js" />
+    <Content Include="scripts\angular-growl-2\src\growlFactory.js" />
+    <Content Include="scripts\angular-growl-2\src\growlMessageService.js" />
+    <Content Include="scripts\angular-growl-2\src\images\error-red.png" />
+    <Content Include="scripts\angular-growl-2\src\images\error-white.png" />
+    <Content Include="scripts\angular-growl-2\src\images\info-blue.png" />
+    <Content Include="scripts\angular-growl-2\src\images\info-white.png" />
+    <Content Include="scripts\angular-growl-2\src\images\success-green.png" />
+    <Content Include="scripts\angular-growl-2\src\images\success-white.png" />
+    <Content Include="scripts\angular-growl-2\src\images\warning-white.png" />
+    <Content Include="scripts\angular-growl-2\src\images\warning-yellow.png" />
+    <Content Include="scripts\angular-growl-2\test\growlDirectiveTests.js" />
+    <Content Include="scripts\angular-growl-2\test\growlFactoryTests.js" />
+    <Content Include="scripts\angular-growl-2\test\growlMessageServiceTests.js" />
+    <Content Include="scripts\angular-loading-bar v0.9.0\loading-bar.css" />
+    <Content Include="scripts\angular-loading-bar v0.9.0\loading-bar.js" />
+    <Content Include="scripts\angular-loading-bar v0.9.0\loading-bar.min.css" />
+    <Content Include="scripts\angular-loading-bar v0.9.0\loading-bar.min.js" />
+    <Content Include="scripts\angular-local-storage.min.js" />
+    <Content Include="scripts\angular-material.min.js" />
+    <Content Include="scripts\angular.min.js" />
+    <Content Include="scripts\authComplete.js" />
+    <Content Include="scripts\deviceDetector\ng-device-detector.min.js" />
+    <Content Include="scripts\deviceDetector\re-tree.min.js" />
+    <Content Include="scripts\jsxlsx\ANGULARJS_READING_EXCEL_FILE.html" />
+    <Content Include="scripts\jsxlsx\app.js" />
+    <Content Include="scripts\jsxlsx\grid.html" />
+    <Content Include="scripts\jsxlsx\index.html" />
+    <Content Include="scripts\jsxlsx\jszip.js" />
+    <Content Include="scripts\jsxlsx\SheetJS-angular.js" />
+    <Content Include="scripts\jsxlsx\shim.js" />
+    <Content Include="scripts\jsxlsx\xlsx.core.min.js" />
+    <Content Include="scripts\jsxlsx\xlsx.full.min.js" />
+    <Content Include="scripts\loading-bar.min.js" />
+    <Content Include="scripts\loading-bar.min_angular-loading-bar v0.3.0.js" />
+    <Content Include="scripts\unity-1.3.0\css\em-unity-1.3.0.css" />
+    <Content Include="scripts\unity-1.3.0\css\em-unity-1.3.0.min.css" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05Bold_web.svg" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05Light_web.svg" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05RegularItalic_web.svg" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05Regular_web.svg" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05SemiboldItalic_web.svg" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05Semibold_web.svg" />
+    <Content Include="scripts\unity-1.3.0\images\24\em-icons.svg" />
+    <Content Include="scripts\unity-1.3.0\images\48\em-icons.svg" />
+    <Content Include="scripts\unity-1.3.0\images\em-icons.svg" />
+    <Content Include="scripts\unity-1.3.0\images\icon-spinner.svg" />
+    <Content Include="scripts\unity-1.3.0\js\em-unity-1.3.0.js" />
+    <Content Include="scripts\unity-1.3.0\js\em-unity-1.3.0.min.js" />
+    <Content Include="scripts\unity-1.3.0\js\vendor\flickity.pkgd.min.js" />
+    <Content Include="scripts\unity-1.3.0\js\vendor\iframeResizer.contentWindow.min.js" />
+    <Content Include="scripts\unity-1.3.0\js\vendor\pikaday.js" />
+    <Content Include="scripts\unity-1.3.0\js\vendor\svg4everybody.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\fonts\fontawesome-webfont.eot" />
+    <Content Include="content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="content\fonts\fontawesome-webfont.woff" />
+    <Content Include="content\fonts\FontAwesome.otf" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="packages.config" />
+    <Content Include="scripts\angucompleteAlt\countries.json" />
+    <Content Include="scripts\angucompleteAlt\fonts\bariol\bariol_bold-webfont.eot" />
+    <Content Include="scripts\angucompleteAlt\fonts\bariol\bariol_bold-webfont.ttf" />
+    <Content Include="scripts\angucompleteAlt\fonts\bariol\bariol_bold-webfont.woff" />
+    <Content Include="scripts\angucompleteAlt\fonts\bariol\bariol_regular-webfont.eot" />
+    <Content Include="scripts\angucompleteAlt\fonts\bariol\bariol_regular-webfont.ttf" />
+    <Content Include="scripts\angucompleteAlt\fonts\bariol\bariol_regular-webfont.woff" />
+    <Content Include="scripts\angucompleteAlt\README.md" />
+    <Content Include="scripts\angucomplete\fonts\bariol\bariol_bold-webfont.eot" />
+    <Content Include="scripts\angucomplete\fonts\bariol\bariol_bold-webfont.ttf" />
+    <Content Include="scripts\angucomplete\fonts\bariol\bariol_bold-webfont.woff" />
+    <Content Include="scripts\angucomplete\fonts\bariol\bariol_regular-webfont.eot" />
+    <Content Include="scripts\angucomplete\fonts\bariol\bariol_regular-webfont.ttf" />
+    <Content Include="scripts\angucomplete\fonts\bariol\bariol_regular-webfont.woff" />
+    <Content Include="scripts\angucomplete\README.md" />
+    <Content Include="scripts\angular-growl-2\.gitignore" />
+    <Content Include="scripts\angular-growl-2\.jshintrc" />
+    <Content Include="scripts\angular-growl-2\bower.json" />
+    <Content Include="scripts\angular-growl-2\CHANGELOG.md" />
+    <Content Include="scripts\angular-growl-2\LICENSE" />
+    <Content Include="scripts\angular-growl-2\package.json" />
+    <Content Include="scripts\angular-growl-2\README.md" />
+    <Content Include="scripts\jsxlsx\README.md" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05Bold_web.eot" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05Bold_web.ttf" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05Bold_web.woff" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05Bold_web.woff2" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05Light_web.eot" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05Light_web.ttf" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05Light_web.woff" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05Light_web.woff2" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05RegularItalic_web.eot" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05RegularItalic_web.ttf" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05RegularItalic_web.woff" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05RegularItalic_web.woff2" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05Regular_web.eot" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05Regular_web.ttf" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05Regular_web.woff" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05Regular_web.woff2" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05SemiboldItalic_web.eot" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05SemiboldItalic_web.ttf" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05SemiboldItalic_web.woff" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05SemiboldItalic_web.woff2" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05Semibold_web.eot" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05Semibold_web.ttf" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05Semibold_web.woff" />
+    <Content Include="scripts\unity-1.3.0\fonts\EMprintW05Semibold_web.woff2" />
+    <None Include="Properties\PublishProfiles\HKLPGApp - Web Deploy.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="content\images\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51126</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51127/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
