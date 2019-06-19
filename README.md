@@ -6,7 +6,7 @@ This framework is used for developing mostly Single Page applications. This fram
 # Unit Testing ready
 The designers at Google not only developed Angular but also developed a testing framework called "Karma" which helps in designing unit tests for AngularJS applications.
 
-# Instructions to build codes
+# Instructions to build code
 
 Interest Rates App developed using VS 2017 also you may use free IDE tool like VS code
 Open solution file in visual studio and build the project which will creates binary deployment packages.
