@@ -1,0 +1,196 @@
+﻿<header class="em-c-section__header" style="margin-bottom: 0px;">
+    <h2 class="em-c-section__title ">
+        Interest rates
+    </h2>
+    <p class="text-primary">select date range to view report</p>
+</header>
+
+<form name="frmInterestRates" ng-submit="submitfrmInterestRates(frmInterestRates.$valid)" class="em-js-form" validate>
+
+    <div class="em-l-grid em-l-grid--6up">
+        <div class="em-l-grid__item">
+            <div class="em-c-field ">
+                <label for="" class="em-c-field__label">Filter by banks and finance companies</label>
+                <div class="em-c-field ">
+                    <div class="em-c-field__body">
+                        <ul class="em-c-option-list">
+                            <li class="em-c-option-list__item">
+                                <label class="em-c-input-group " for="inline-check-1">
+                                    <input id="prime_lending_rate" type="checkbox" ng-model='cbxFilter' name="prime_lending_rate" value="prime_lending_rate" class="em-c-input-group__control">
+                                    <span class="em-c-input-group__text">Prime Lending Rate</span>
+                                </label>
+                                <label class="em-c-input-group " for="inline-check-1">
+                                    <input id="banks_fixed_deposits_3m" type="checkbox" name="banks_fixed_deposits_3m" value="banks_fixed_deposits_3m" class="em-c-input-group__control">
+                                    <span class="em-c-input-group__text">Banks Fixed Deposits 3 Months</span>
+                                </label>
+                                <label class="em-c-input-group " for="inline-check-1">
+                                    <input id="banks_fixed_deposits_6m" type="checkbox" name="banks_fixed_deposits_6m" value="banks_fixed_deposits_6m" class="em-c-input-group__control">
+                                    <span class="em-c-input-group__text">Banks Fixed Deposits 6 Months</span>
+                                </label>
+                                <label class="em-c-input-group " for="inline-check-1">
+                                    <input id="banks_fixed_deposits_12m" type="checkbox" name="banks_fixed_deposits_12m" value="banks_fixed_deposits_12m" class="em-c-input-group__control">
+                                    <span class="em-c-input-group__text">Banks Fixed Deposits 12 Months</span>
+                                </label>
+                                <label class="em-c-input-group " for="inline-check-1">
+                                    <input id="banks_savings_deposits" type="checkbox" name="banks_savings_deposits" value="banks_savings_deposits" class="em-c-input-group__control">
+                                    <span class="em-c-input-group__text">Banks Savings Deposits</span>
+                                </label>
+                                <label class="em-c-input-group " for="inline-check-1">
+                                    <input id="fc_hire_purchase_motor_3y" type="checkbox" name="fc_hire_purchase_motor_3y" value="fc_hire_purchase_motor_3y" class="em-c-input-group__control">
+                                    <span class="em-c-input-group__text">Finance Companies Loans - Hire Purchase of New Vehicles For 3 Years</span>
+                                </label>
+                                <label class="em-c-input-group " for="inline-check-1">
+                                    <input id="fc_housing_loans_15y" type="checkbox" name="fc_housing_loans_15y" value="fc_housing_loans_15y" class="em-c-input-group__control">
+                                    <span class="em-c-input-group__text">Finance Companies Housing Loans For 15 Years</span>
+                                </label>
+                                <label class="em-c-input-group " for="inline-check-1">
+                                    <input id="fc_fixed_deposits_3m" type="checkbox" name="fc_fixed_deposits_3m" value="fc_fixed_deposits_3m" class="em-c-input-group__control">
+                                    <span class="em-c-input-group__text">Finance Companies Fixed Deposits 3 Months</span>
+                                </label>
+                                <label class="em-c-input-group " for="inline-check-1">
+                                    <input id="fc_fixed_deposits_6m" type="checkbox" name="fc_fixed_deposits_6m" value="fc_fixed_deposits_6m" class="em-c-input-group__control">
+                                    <span class="em-c-input-group__text">Finance Companies Fixed Deposits 6 Months</span>
+                                </label>
+                                <label class="em-c-input-group " for="inline-check-1">
+                                    <input id="fc_fixed_deposits_12m" type="checkbox" name="fc_fixed_deposits_12m" value="fc_fixed_deposits_12m" class="em-c-input-group__control">
+                                    <span class="em-c-input-group__text">Finance Companies Fixed Deposits 12 Months</span>
+                                </label>
+                                <label class="em-c-input-group " for="inline-check-1">
+                                    <input id="fc_savings_deposits" type="checkbox" name="fc_savings_deposits" value="fc_savings_deposits" class="em-c-input-group__control">
+                                    <span class="em-c-input-group__text">Finance Companies Savings Deposits</span>
+                                </label>
+                                <!-- end em-c-input-group -->
+                            </li>
+                            <!-- end em-c-checkbox-list__item -->
+                        </ul>
+                        <!-- end em-c-option-list -->
+                    </div>
+                    <!-- end em-c-field__body -->
+                    <!--<div class="em-c-field__note">enter meter value</div>-->
+                </div>
+            </div>
+        </div>
+        <div class="em-l-grid__item">
+            <div class="em-c-field ">
+                <label for="" class="em-c-field__label">Start from year of month</label>
+                <input type="month" id="start" name="start"
+                       min="2000-01" value="" required>
+            </div>
+            <div class="em-c-field__note">select from year and month</div>
+        </div>
+        <div class="em-l-grid__item">
+            <div class="em-c-field ">
+                <label for="" class="em-c-field__label">End to year of Month</label>
+                <input type="month" id="end" name="end"
+                       min="2000-01" value="" required>
+                <div class="em-c-field__note">select to year and month</div>
+            </div>
+        </div>
+        <div class="em-l-grid__item">
+            <div class="em-c-field ">
+                <label for="" class="em-c-field__label">&nbsp;</label>
+                <div class="em-c-btn-group">
+                    <button type="submit" class="em-c-btn em-c-btn--primary ">
+                        <span class="em-c-btn__text">Submit</span>
+                    </button>
+                </div>
+                <div class="em-c-field__note">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+    <div class="em-l-grid em-l-grid--6up">
+    </div>
+</form>
+<div class="em-c-table-object " ng-show="showReportData" style="margin-bottom: 0px;">
+    <div class="em-c-table-object__header">
+        <div class="em-c-toolbar ">
+            <div class="em-c-toolbar__item">
+                <div class="em-c-field " style="margin-bottom: 0px;">
+                    <div class="em-c-btn-group">
+                        Report Count: {{report.length}}
+                    </div>
+                </div>
+            </div>
+            <div class="em-c-toolbar__item em-is-aligned-right">
+                <div class="em-c-field " style="margin-bottom: 0px;">
+                    <div class="em-c-btn-group">
+                        <button class="em-c-btn em-c-btn--primary" ng-click="exportReportData()">
+                            <span class="em-c-btn__text">Export</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="em-c-table-object__body">
+        <div class="em-c-table-object__body-inner">
+            <table id="tblReportData" class="em-c-table">
+                <thead class="em-c-table__header">
+                    <tr class="em-c-table__header-row">
+                        <th ng-click="sort('prime_lending_rate')" scope="col" class="em-c-table__header-cell ">
+                            Prime Lending Rate
+                            <span class="sortorder" ng-show="sortCol=='prime_lending_rate'" ng-class="{reverse: sortOrder}"></span>
+                        </th>
+                        <th ng-click="sort('banks_fixed_deposits_3m')" scope="col" class="em-c-table__header-cell ">
+                            Banks Fixed Deposits 3 Months
+                            <span class="sortorder" ng-show="sortCol=='banks_fixed_deposits_3m'" ng-class="{reverse: sortOrder}"></span>
+                        </th>
+                        <th ng-click="sort('banks_fixed_deposits_6m')" scope="col" class="em-c-table__header-cell ">
+                            Banks Fixed Deposits 6 Months
+                            <span class="sortorder" ng-show="sortCol=='banks_fixed_deposits_6m'" ng-class="{reverse: sortOrder}"></span>
+                        </th>
+                        <th ng-click="sort('banks_fixed_deposits_12m')" scope="col" class="em-c-table__header-cell ">
+                            Banks Fixed Deposits 12 Months
+                            <span class="sortorder" ng-show="sortCol=='banks_fixed_deposits_12m'" ng-class="{reverse: sortOrder}"></span>
+                        </th>
+                        <th ng-click="sort('banks_savings_deposits')" scope="col" class="em-c-table__header-cell ">
+                            Banks Savings Deposits
+                            <span class="sortorder" ng-show="sortCol=='banks_savings_deposits'" ng-class="{reverse: sortOrder}"></span>
+                        </th>
+                        <th ng-click="sort('fc_hire_purchase_motor_3y')" scope="col" class="em-c-table__header-cell  em-u-text-align-center ">
+                            Finance Companies Loans - Hire Purchase of New Vehicles For 3 Years
+                            <span class="sortorder" ng-show="sortCol=='fc_hire_purchase_motor_3y'" ng-class="{reverse: sortOrder}"></span>
+                        </th>
+                        <th ng-click="sort('fc_housing_loans_15y')" scope="col" class="em-c-table__header-cell ">
+                            Finance Companies Housing Loans For 15 Years
+                            <span class="sortorder" ng-show="sortCol=='fc_housing_loans_15y'" ng-class="{reverse: sortOrder}"></span>
+                        </th>
+                        <th ng-click="sort('fc_fixed_deposits_3m')" scope="col" class="em-c-table__header-cell em-u-text-align-center ">
+                            Finance Companies Fixed Deposits 3 Months
+                            <span class="sortorder" ng-show="sortCol=='fc_fixed_deposits_3m'" ng-class="{reverse: sortOrder}"></span>
+                        </th>
+                        <th ng-click="sort('fc_fixed_deposits_6m')" scope="col" class="em-c-table__header-cell ">
+                            Finance Companies Fixed Deposits 6 Months
+                            <span class="sortorder" ng-show="sortCol=='fc_fixed_deposits_6m'" ng-class="{reverse: sortOrder}"></span>
+                        </th>
+                        <th ng-click="sort('fc_fixed_deposits_12m')" scope="col" class="em-c-table__header-cell ">
+                            Finance Companies Fixed Deposits 12 Months
+                            <span class="sortorder" ng-show="sortCol=='fc_fixed_deposits_12m'" ng-class="{reverse: sortOrder}"></span>
+                        </th>
+                        <th ng-click="sort('fc_savings_deposits')" scope="col" class="em-c-table__header-cell ">
+                            Finance Companies Savings Deposits
+                            <span class="sortorder" ng-show="sortCol=='fc_savings_deposits'" ng-class="{reverse: sortOrder}"></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="em-c-table__body ">
+                    <tr class="em-c-table__row " ng-repeat="item in items | orderBy:sortCol:sortOrder">
+                        <td class="em-c-table__cell ">
+                            {{item}}
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot class="em-c-table__footer">
+                    <tr class="em-c-table__footer-row"></tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <div class="em-c-table-object__footer">
+        <div class="em-c-toolbar ">
+            <div class="em-c-toolbar__item em-is-aligned-right">
+                Count: {{report.length}}
+            </div>
+        </div>
+    </div>
+</div>
